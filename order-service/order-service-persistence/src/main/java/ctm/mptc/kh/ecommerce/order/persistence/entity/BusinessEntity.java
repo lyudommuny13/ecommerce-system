@@ -1,0 +1,28 @@
+package ctm.mptc.kh.ecommerce.order.persistence.entity;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+import java.util.UUID;
+
+// POJO
+@Getter
+@Setter
+@NoArgsConstructor
+@IdClass(BusinessIdEntity.class)
+
+@Entity
+@Table(name = "business")
+public class BusinessEntity {
+    @Id private UUID businessId;
+    @Id private UUID productId;
+
+    private boolean businessActive;
+
+    private String productName;
+    private BigDecimal productPrice;
+
+}

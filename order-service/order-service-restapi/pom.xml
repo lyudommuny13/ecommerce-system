@@ -14,7 +14,19 @@
     <dependencies>
         <dependency>
             <groupId>ctm.mptc.kh</groupId>
+            <artifactId>common-restapi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ctm.mptc.kh</groupId>
             <artifactId>order-application-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
         </dependency>
     </dependencies>
 </project>
