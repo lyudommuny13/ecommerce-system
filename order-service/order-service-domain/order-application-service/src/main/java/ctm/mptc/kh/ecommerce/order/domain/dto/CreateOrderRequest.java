@@ -1,4 +1,4 @@
-package ctm.mptc.kh.ecommerce.domain.dto;
+package ctm.mptc.kh.ecommerce.order.domain.dto;
 
 import ctm.mptc.kh.ecommerce.domain.valueobject.BusinessId;
 import ctm.mptc.kh.ecommerce.domain.valueobject.CustomerId;

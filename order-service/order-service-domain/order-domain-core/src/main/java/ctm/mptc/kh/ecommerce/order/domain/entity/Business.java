@@ -1,5 +1,6 @@
-package ctm.mptc.kh.ecommerce.domain.entity;
+package ctm.mptc.kh.ecommerce.order.domain.entity;
 
+import ctm.mptc.kh.ecommerce.domain.entity.AggregateRoot;
 import ctm.mptc.kh.ecommerce.domain.valueobject.BusinessId;
 
 import java.util.List;

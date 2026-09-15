@@ -1,5 +1,6 @@
-package ctm.mptc.kh.ecommerce.domain.entity;
+package ctm.mptc.kh.ecommerce.order.domain.entity;
 
+import ctm.mptc.kh.ecommerce.domain.entity.BaseEntity;
 import ctm.mptc.kh.ecommerce.domain.valueobject.Money;
 import ctm.mptc.kh.ecommerce.domain.valueobject.OrderId;
 import ctm.mptc.kh.ecommerce.domain.valueobject.OrderItemId;

@@ -1,6 +1,6 @@
-package ctm.mptc.kh.ecommerce.domain.event;
+package ctm.mptc.kh.ecommerce.order.domain.event;
 
-import ctm.mptc.kh.ecommerce.domain.entity.Order;
+import ctm.mptc.kh.ecommerce.order.domain.entity.Order;
 
 import java.time.ZonedDateTime;
 

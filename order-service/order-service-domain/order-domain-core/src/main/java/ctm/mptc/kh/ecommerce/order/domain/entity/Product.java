@@ -1,9 +1,10 @@
-package ctm.mptc.kh.ecommerce.domain.entity;
+package ctm.mptc.kh.ecommerce.order.domain.entity;
 
+import ctm.mptc.kh.ecommerce.domain.entity.BaseEntity;
 import ctm.mptc.kh.ecommerce.domain.valueobject.Money;
 import ctm.mptc.kh.ecommerce.domain.valueobject.ProductId;
 
-public class Product extends BaseEntity<ProductId>{
+public class Product extends BaseEntity<ProductId> {
     private final  String name;
     private final Money price;
 

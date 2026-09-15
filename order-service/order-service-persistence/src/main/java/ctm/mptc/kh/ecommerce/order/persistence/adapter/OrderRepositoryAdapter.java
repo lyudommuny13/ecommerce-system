@@ -1,7 +1,7 @@
 package ctm.mptc.kh.ecommerce.order.persistence.adapter;
 
-import ctm.mptc.kh.ecommerce.domain.entity.Order;
-import ctm.mptc.kh.ecommerce.domain.port.output.OrderRepository;
+import ctm.mptc.kh.ecommerce.order.domain.entity.Order;
+import ctm.mptc.kh.ecommerce.order.domain.port.output.OrderRepository;
 import ctm.mptc.kh.ecommerce.order.persistence.repository.OrderJpaRepository;
 
 public class OrderRepositoryAdapter implements OrderRepository {
