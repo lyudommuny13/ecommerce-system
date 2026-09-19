@@ -17,8 +17,10 @@ import java.util.UUID;
 @Entity
 @Table(name = "business")
 public class BusinessEntity {
-    @Id private UUID businessId;
-    @Id private UUID productId;
+    @Id
+    private UUID businessId;
+    @Id
+    private UUID productId;
 
     private boolean businessActive;
 
