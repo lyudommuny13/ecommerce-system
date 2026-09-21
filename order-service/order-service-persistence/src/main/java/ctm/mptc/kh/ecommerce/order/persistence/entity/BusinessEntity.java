@@ -13,18 +13,16 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @IdClass(BusinessIdEntity.class)
-
 @Entity
-@Table(name = "business")
+@Table(name = "businesses")
 public class BusinessEntity {
     @Id
     private UUID businessId;
     @Id
     private UUID productId;
 
-    private boolean businessActive;
+    private Boolean businessActive;
 
     private String productName;
     private BigDecimal productPrice;
-
 }
