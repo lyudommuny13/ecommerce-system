@@ -53,7 +53,7 @@
             </dependency>
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
-                <artifactId>order-application-main</artifactId>
+                <artifactId>order-service-messaging</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -63,12 +63,12 @@
             </dependency>
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
-                <artifactId>order-service-messaging</artifactId>
+                <artifactId>order-service-restapi</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
-                <artifactId>order-service-restapi</artifactId>
+                <artifactId>order-service-main</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
