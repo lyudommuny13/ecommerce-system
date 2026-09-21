@@ -6,7 +6,7 @@ import ctm.mptc.kh.ecommerce.domain.valueobject.ProductId;
 import ctm.mptc.kh.ecommerce.order.domain.entity.Business;
 import ctm.mptc.kh.ecommerce.order.domain.entity.Product;
 import ctm.mptc.kh.ecommerce.order.persistence.entity.BusinessEntity;
-import ctm.mptc.kh.ecommerce.order.persistence.exception.BusinessPersistenceException;
+import ctm.mptc.kh.ecommerce.persistence.exception.BusinessPersistenceException;
 import org.mapstruct.Mapper;
 
 import java.util.List;

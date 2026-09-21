@@ -12,8 +12,8 @@ spring:
     url: jdbc:postgresql://localhost:8432/db_order
   jpa:
     hibernate:
-      ddl-auto: create-drop
-    show-sql: true
+      ddl-auto: update
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
