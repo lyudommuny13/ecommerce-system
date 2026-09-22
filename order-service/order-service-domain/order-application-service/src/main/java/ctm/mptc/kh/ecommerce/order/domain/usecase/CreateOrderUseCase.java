@@ -32,7 +32,7 @@ public class CreateOrderUseCase {
 
         // Validate customer
         customerRepository.findCustomer(createOrderCommand.customerId())
-                .orElseThrow(() -> new OrderDomainException("Could not find customer with ID: {}" + createOrderCommand.customerId()));
+                .orElseThrow(() -> new OrderDomainException("Could not find customer with ID: " + createOrderCommand.customerId()));
 
         // Validate business
         List<Product> products = createOrderCommand.items()
@@ -50,7 +50,7 @@ public class CreateOrderUseCase {
                 .build();
 
         business = businessRepository.findBusiness(business)
-                .orElseThrow(() -> new OrderDomainException("could not find business with ID: {}" + createOrderCommand.businessId()));
+                .orElseThrow(() -> new OrderDomainException("could not find business with ID: " + createOrderCommand.businessId()));
 
         log.info("Business found with ID: {}", business);
         return new CreateOrderResult(UUID.randomUUID());

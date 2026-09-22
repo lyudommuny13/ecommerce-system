@@ -18,7 +18,7 @@ public class OrderAddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private  String street;
+    private String street;
     private String postalCode;
     private String city;
 
