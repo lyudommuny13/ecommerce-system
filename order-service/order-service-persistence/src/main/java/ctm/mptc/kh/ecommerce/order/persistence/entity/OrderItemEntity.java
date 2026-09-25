@@ -15,9 +15,9 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "order_items")
+@IdClass(OrderItemIdEntity.class)
 public class OrderItemEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private UUID productId;
 
@@ -25,6 +25,7 @@ public class OrderItemEntity {
     private BigDecimal price;
     private BigDecimal subTotal;
 
+    @Id
     @ManyToOne
     private OrderEntity order;
 }

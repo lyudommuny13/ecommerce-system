@@ -2,10 +2,20 @@ package ctm.mptc.kh.ecommerce.domain.valueobject;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Objects;
 
-public record Money(BigDecimal amount)
-{
-    public  static  final  Money ZERO = new Money(BigDecimal.ZERO);
+public class Money {
+    private final BigDecimal amount;
+
+    public Money(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public static final Money ZERO = new Money(BigDecimal.ZERO);
 
     // Validate amount > 0
     public boolean isGreaterThanZero() {
@@ -34,5 +44,16 @@ public record Money(BigDecimal amount)
 
     private BigDecimal setScale(BigDecimal inputAmount) {
         return inputAmount.setScale(2, RoundingMode.HALF_EVEN);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Money money)) return false;
+        return Objects.equals(setScale(amount), setScale(money.amount));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(setScale(amount));
     }
 }

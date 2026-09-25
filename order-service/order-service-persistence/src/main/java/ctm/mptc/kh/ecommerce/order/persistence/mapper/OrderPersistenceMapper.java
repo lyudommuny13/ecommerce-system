@@ -1,7 +1,9 @@
 package ctm.mptc.kh.ecommerce.order.persistence.mapper;
 
+import ctm.mptc.kh.ecommerce.domain.valueobject.StreetAddress;
 import ctm.mptc.kh.ecommerce.order.domain.entity.Order;
 import ctm.mptc.kh.ecommerce.order.domain.entity.OrderItem;
+import ctm.mptc.kh.ecommerce.order.persistence.entity.OrderAddressEntity;
 import ctm.mptc.kh.ecommerce.order.persistence.entity.OrderEntity;
 import ctm.mptc.kh.ecommerce.order.persistence.entity.OrderItemEntity;
 import org.mapstruct.Mapper;
@@ -19,12 +21,16 @@ public interface OrderPersistenceMapper {
     @Mapping(source = "businessId.value", target = "businessId")
     @Mapping(source = "price.amount", target = "price")
     @Mapping(source = "trackingId.value", target = "trackingId")
+    @Mapping(source = "deliveryAddress", target = "orderAddress")
     @Mapping(source = "failureMessages", target = "failureMessages", qualifiedByName = "mapFailureMessages")
     OrderEntity orderToOrderEntity(Order order);
 
+    @Mapping(target = "id", expression = "java(UUID.randomUUID())")
+    OrderAddressEntity deliveryAddressToOrderAddressEntity(StreetAddress deliveryAddress);
+
     @Named("mapFailureMessages")
     default String mapFailureMessages(List<String> failureMessages) {
-        return String.join(",", failureMessages);
+        return failureMessages == null ? "" : String.join(",", failureMessages);
     }
 
     // Issue Map List<OrderItem> to List<OrderItemEntity>
@@ -51,6 +57,6 @@ public interface OrderPersistenceMapper {
 
     @Named("mapFailureMessagesToList")
     default List<String> mapFailureMessagesToList(String failureMessages) {
-        return Arrays.stream(failureMessages.split(",")).toList();
+        return failureMessages == null ? List.of() : Arrays.stream(failureMessages.split(",")).toList();
     }
 }

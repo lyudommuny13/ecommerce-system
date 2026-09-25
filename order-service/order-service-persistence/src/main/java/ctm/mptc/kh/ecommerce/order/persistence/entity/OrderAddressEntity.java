@@ -16,7 +16,7 @@ import java.util.UUID;
 @Table(name = "order_addresses")
 public class OrderAddressEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+//    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String street;
     private String postalCode;

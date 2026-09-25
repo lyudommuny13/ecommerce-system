@@ -20,18 +20,20 @@ import java.util.UUID;
 @Table(name = "orders") // change table name
 public class OrderEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+//    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private UUID customerId;
     private UUID businessId;
     private UUID trackingId;
-    private OrderStatus orderStatus;
     private String failureMessages;
     private BigDecimal price;
 
-    @OneToMany(mappedBy = "order")
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItemEntity> items;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private OrderAddressEntity orderAddress;
 }
