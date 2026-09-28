@@ -1,0 +1,19 @@
+# Change order service running port
+server:
+  port: 8553
+
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ecommerce_usr
+    password: qwerqwer
+    url: jdbc:postgresql://localhost:8432/db_business
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true

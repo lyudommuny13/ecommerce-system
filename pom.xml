@@ -20,6 +20,7 @@
     <modules>
         <module>common</module>
         <module>order-service</module>
+        <module>business-service</module>
     </modules>
 
     <properties>
@@ -46,6 +47,8 @@
                 <artifactId>common-persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
                 <artifactId>order-domain-core</artifactId>
@@ -74,6 +77,28 @@
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
                 <artifactId>order-service-main</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>business-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>business-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>business-service-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>business-service-main</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
