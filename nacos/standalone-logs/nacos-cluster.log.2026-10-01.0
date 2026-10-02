@@ -1,0 +1,16 @@
+2026-10-01 09:31:17,848 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2026-10-01 09:31:17,863 INFO [ClusterRpcClientProxy] success to refresh cluster rpc client on start up,members =[] 
+
+2026-10-01 09:31:25,133 INFO All Nacos server upgrade to upper 3.x, enabled inner api auth identity check
+
+2026-10-01 09:31:27,229 INFO This node is ready to provide external services
+
+2026-10-01 13:57:06,261 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2026-10-01 13:57:06,271 INFO [ClusterRpcClientProxy] success to refresh cluster rpc client on start up,members =[] 
+
+2026-10-01 13:57:13,603 INFO All Nacos server upgrade to upper 3.x, enabled inner api auth identity check
+
+2026-10-01 13:57:15,623 INFO This node is ready to provide external services
+

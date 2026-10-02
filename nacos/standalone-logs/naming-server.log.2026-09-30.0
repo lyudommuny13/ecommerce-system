@@ -1,0 +1,64 @@
+2026-09-30 10:12:54,121 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2026-09-30 10:12:54,122 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2026-09-30 10:12:54,122 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2026-09-30 10:12:54,122 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2026-09-30 10:19:47,894 INFO [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2026-09-30 10:19:47,901 INFO [NamingServerHttpClientManager] Completed destruction of HTTP-Client
+
+2026-09-30 16:58:52,160 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2026-09-30 16:58:52,160 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2026-09-30 16:58:52,161 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2026-09-30 16:58:52,161 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2026-09-30 19:03:51,962 INFO Client connection 1790766231669_172.21.0.1_60710 connect
+
+2026-09-30 19:03:52,114 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, 1790766231669_172.21.0.1_60710
+
+2026-09-30 19:03:52,130 WARN [fuzzy-watch] service change matched,service key public@@DEFAULT_GROUP@@order-service,changed type ADD_SERVICE 
+
+2026-09-30 19:04:38,674 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, 1790766231669_172.21.0.1_60710
+
+2026-09-30 19:04:38,675 WARN [fuzzy-watch] service change matched,service key public@@DEFAULT_GROUP@@order-service,changed type DELETE_SERVICE 
+
+2026-09-30 19:04:38,697 INFO Client connection 1790766231669_172.21.0.1_60710 disconnect, remove instances and subscribers
+
+2026-09-30 19:04:50,535 INFO Client connection 1790766290457_172.21.0.1_55938 connect
+
+2026-09-30 19:04:50,559 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=2}, 1790766290457_172.21.0.1_55938
+
+2026-09-30 19:04:50,559 WARN [fuzzy-watch] service change matched,service key public@@DEFAULT_GROUP@@order-service,changed type ADD_SERVICE 
+
+2026-09-30 19:07:25,556 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=3}, 1790766290457_172.21.0.1_55938
+
+2026-09-30 19:07:25,556 WARN [fuzzy-watch] service change matched,service key public@@DEFAULT_GROUP@@order-service,changed type DELETE_SERVICE 
+
+2026-09-30 19:07:25,567 INFO Client connection 1790766290457_172.21.0.1_55938 disconnect, remove instances and subscribers
+
+2026-09-30 19:07:36,241 INFO Client connection 1790766456178_172.21.0.1_47534 connect
+
+2026-09-30 19:07:36,262 INFO Client change for service Service{namespace='dev', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, 1790766456178_172.21.0.1_47534
+
+2026-09-30 19:07:36,262 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@order-service,changed type ADD_SERVICE 
+
+2026-09-30 19:09:21,527 WARN namespace : public, [DEFAULT_GROUP@@order-service] services are automatically cleaned
+
+2026-09-30 19:10:55,473 INFO Client connection 1790766655405_172.21.0.1_35684 connect
+
+2026-09-30 19:10:55,494 INFO Client change for service Service{namespace='dev', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, 1790766655405_172.21.0.1_35684
+
+2026-09-30 19:11:48,698 INFO [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2026-09-30 19:11:48,710 INFO [NamingServerHttpClientManager] Completed destruction of HTTP-Client
+
+2026-09-30 19:11:48,728 INFO Client connection 1790766655405_172.21.0.1_35684 disconnect, remove instances and subscribers
+
+2026-09-30 19:11:48,729 INFO Client connection 1790766456178_172.21.0.1_47534 disconnect, remove instances and subscribers
+

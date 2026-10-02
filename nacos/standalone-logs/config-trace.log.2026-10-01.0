@@ -1,0 +1,12 @@
+2026-10-01 09:31:26,068|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790818286048|df9eb4e67179|persist|pub|-1|a2e19afa240ec0f443166012808614dc
+2026-10-01 09:31:26,142|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790818286048|172.21.0.2|dump|ok|93|13
+2026-10-01 09:31:26,237|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790818286237|null|persist|remove|-1|null
+2026-10-01 09:31:26,245|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790818286237|172.21.0.2|dump|remove-ok|8|0
+2026-10-01 13:57:14,546|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790834234527|df9eb4e67179|persist|pub|-1|97c4642b7a55ce0af4cf6f60f7ab0f41
+2026-10-01 13:57:14,659|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790834234527|172.21.0.2|dump|ok|132|13
+2026-10-01 13:57:14,702|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790834234702|null|persist|remove|-1|null
+2026-10-01 13:57:14,763|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1790834234702|172.21.0.2|dump|remove-ok|61|0
+2026-10-01 13:58:54,595|df9eb4e67179|payment-service.yaml|DEFAULT_GROUP|dev|null|1790834334588|df9eb4e67179|persist|pub|-1|1dde86116364016cf6f2ee2b1d08617e
+2026-10-01 13:58:54,674|df9eb4e67179|payment-service.yaml|DEFAULT_GROUP|dev|null|1790834334588|172.21.0.2|dump|ok|85|95
+2026-10-01 13:59:15,511|df9eb4e67179|customer-service.yaml|DEFAULT_GROUP|dev|null|1790834355507|df9eb4e67179|persist|pub|-1|691ec9a1e9ba88ebc26ac3d983bea73c
+2026-10-01 13:59:15,524|df9eb4e67179|customer-service.yaml|DEFAULT_GROUP|dev|null|1790834355507|172.21.0.2|dump|ok|17|96
