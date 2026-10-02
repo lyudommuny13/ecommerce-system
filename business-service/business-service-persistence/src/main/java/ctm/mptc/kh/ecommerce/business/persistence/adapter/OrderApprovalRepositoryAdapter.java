@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 @RequiredArgsConstructor
 public class OrderApprovalRepositoryAdapter implements OrderApprovalRepository {
-
     private final OrderApprovalJpaRepository orderApprovalJpaRepository;
     private final OrderApprovalPersistenceMapper orderApprovalPersistenceMapper;
 

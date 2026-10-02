@@ -11,7 +11,6 @@ import java.time.ZonedDateTime;
 import java.util.List;
 
 public class BusinessDomainServiceImpl implements BusinessDomainService{
-
     @Override
     public OrderApprovalEvent validateOrder(Business business, List<String> failureMessages) {
         business.validateOrder(failureMessages);

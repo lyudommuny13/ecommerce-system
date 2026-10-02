@@ -1,8 +1,8 @@
 package ctm.mptc.kh.ecommerce.order.domain.entity;
 
 import ctm.mptc.kh.ecommerce.domain.entity.AggregateRoot;
-import ctm.mptc.kh.ecommerce.order.domain.exception.OrderDomainException;
 import ctm.mptc.kh.ecommerce.domain.valueobject.*;
+import ctm.mptc.kh.ecommerce.order.domain.exception.OrderDomainException;
 
 import java.util.List;
 import java.util.UUID;

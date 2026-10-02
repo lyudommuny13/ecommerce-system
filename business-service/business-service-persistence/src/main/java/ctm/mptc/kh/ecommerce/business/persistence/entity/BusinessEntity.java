@@ -30,5 +30,4 @@ public class BusinessEntity {
     private String productName;
     private BigDecimal productPrice;
     private Boolean productAvailable;
-
 }

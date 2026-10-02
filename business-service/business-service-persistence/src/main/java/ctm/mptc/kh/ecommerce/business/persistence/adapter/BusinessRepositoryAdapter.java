@@ -15,7 +15,6 @@ import java.util.UUID;
 @Repository
 @RequiredArgsConstructor
 public class BusinessRepositoryAdapter implements BusinessRepository {
-
     private final BusinessJpaRepository businessJpaRepository;
     private final BusinessPersistenceMapper businessPersistenceMapper;
 

@@ -21,6 +21,8 @@
         <module>common</module>
         <module>order-service</module>
         <module>business-service</module>
+        <module>customer-service</module>
+        <module>payment-service</module>
     </modules>
 
     <properties>
@@ -28,10 +30,13 @@
         <mapstruct.version>1.6.3</mapstruct.version>
         <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
         <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
+        <spring-cloud-alibaba.version>2025.1.0.0</spring-cloud-alibaba.version>
+        <spring-cloud.version>2025.1.2</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- common -->
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
                 <artifactId>common-domain</artifactId>
@@ -48,7 +53,7 @@
                 <version>${project.version}</version>
             </dependency>
 
-
+            <!-- order-service -->
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
                 <artifactId>order-domain-core</artifactId>
@@ -80,7 +85,7 @@
                 <version>${project.version}</version>
             </dependency>
 
-
+            <!-- business-service -->
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
                 <artifactId>business-domain-core</artifactId>
@@ -100,6 +105,71 @@
                 <groupId>ctm.mptc.kh</groupId>
                 <artifactId>business-service-main</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+
+            <!-- customer-service -->
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>customer-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>customer-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>customer-service-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>customer-service-restapi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>customer-service-main</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- payment-service -->
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>payment-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>payment-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>payment-service-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>payment-service-main</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

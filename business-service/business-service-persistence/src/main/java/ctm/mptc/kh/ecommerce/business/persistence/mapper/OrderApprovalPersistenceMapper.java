@@ -7,7 +7,6 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface OrderApprovalPersistenceMapper {
-
     @Mapping(source = "id.value", target = "id")
     @Mapping(source = "businessId.value", target = "businessId")
     @Mapping(source = "orderId.value", target = "orderId")

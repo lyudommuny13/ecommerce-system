@@ -43,7 +43,6 @@ public class OrderApproval extends BaseEntity<OrderApprovalId> {
         private Builder() {
         }
 
-
         public Builder id(OrderApprovalId val) {
             id = val;
             return this;

@@ -18,6 +18,18 @@ public class Business extends AggregateRoot<BusinessId> {
         orderDetail = builder.orderDetail;
     }
 
+    public OrderApproval getOrderApproval() {
+        return orderApproval;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public OrderDetail getOrderDetail() {
+        return orderDetail;
+    }
+
     public static Builder builder() {
         return new Builder();
     }
@@ -58,18 +70,6 @@ public class Business extends AggregateRoot<BusinessId> {
                 .orderId(orderDetail.getId())
                 .orderApprovalStatus(status)
                 .build();
-    }
-
-    public OrderApproval getOrderApproval() {
-        return orderApproval;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public OrderDetail getOrderDetail() {
-        return orderDetail;
     }
 
     public static final class Builder {

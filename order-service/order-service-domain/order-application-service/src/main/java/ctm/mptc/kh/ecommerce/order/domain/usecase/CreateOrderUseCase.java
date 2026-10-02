@@ -18,10 +18,8 @@ import ctm.mptc.kh.ecommerce.order.domain.service.OrderDomainService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.UUID;
 
 @Component
 @Slf4j // logging
