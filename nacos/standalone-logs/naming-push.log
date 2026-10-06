@@ -14,3 +14,5 @@
 
 2026-10-02 11:00:17,916 INFO [PUSH] Task merge for Service{namespace='dev', group='DEFAULT_GROUP', name='customer-service', ephemeral=true, revision=8}
 
+2026-10-02 17:35:13,787 INFO [PUSH] Task merge for Service{namespace='dev', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=6}
+
