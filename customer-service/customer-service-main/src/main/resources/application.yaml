@@ -1,12 +1,16 @@
 # Change customer service running port
 server:
   port: 0
+  forward-headers-strategy: framework
 
 spring:
   application:
     name: customer-service
   profiles:
-    active: dev
+    active: dev # profile namespace
+  config:
+    import:
+      - nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension} # order-service.yaml
   cloud:
     nacos:
       discovery:
@@ -14,6 +18,9 @@ spring:
       username: nacos
       password: nacos
       server-addr: 127.0.0.1:8848
+      config:
+        file-extension: yaml # Make sure it match with file extension
+        namespace: ${spring.profiles.active} #(dev) The correct namespace
 
   datasource:
     hikari:

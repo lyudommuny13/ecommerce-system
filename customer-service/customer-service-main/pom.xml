@@ -12,6 +12,12 @@
     <artifactId>customer-service-main</artifactId>
     <dependencies>
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>ctm.mptc.kh</groupId>
             <artifactId>customer-domain-core</artifactId>
         </dependency>
@@ -41,6 +47,12 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <!-- Nacos Configuration -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
         <!-- Nacos 服务发现 -->

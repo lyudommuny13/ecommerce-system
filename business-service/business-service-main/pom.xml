@@ -13,6 +13,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+        <dependency>
             <groupId>ctm.mptc.kh</groupId>
             <artifactId>business-domain-core</artifactId>
         </dependency>
@@ -40,11 +45,18 @@
         </dependency>
 
 
-        <!-- Nacos 服务发现 -->
+        <!-- Nacos Configuration -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- Nacos Discovery -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
         <!-- 服务发现：OpenFeign服务调用 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

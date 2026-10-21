@@ -1,0 +1,91 @@
+server:
+  port: 8585
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: order-service
+        url: /order-service/v3/api-docs
+      - name: customer-service
+        url: /customer-service/v3/api-docs
+      - name: business-service
+        url: /business-service/v3/api-docs
+      - name: payment-service
+        url: /payment-service/v3/api-docs
+
+#scalar:
+#  sources:
+#    - title: Order Service
+#      url: /order-service/v3/api-docs
+#    - title: Customer Service
+#      url: /customer-service/v3/api-docs
+#    - title: Business Service
+#      url: /business-service/v3/api-docs
+#    - title: Payment Service
+#      url: /payment-service/v3/api-docs
+
+spring:
+  application:
+    name: gateway-service
+  profiles:
+    active: dev # profile namespace
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: vuejs
+              uri: http://[::1]:5173
+              predicates:
+                - Path=/**
+#            - id: order-service
+#              uri: lb://order-service #lb = load balance, order-service is application name
+#              predicates:
+#                - Path=/order-service/**
+#              filters:
+#                - RewritePath=/order-service/?(?<segment>.*), /$\{segment}
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          trusted-proxies: ".*"
+          default-filters:
+            - SaveSession
+            - TokenRelay=
+    nacos:
+      discovery:
+        namespace: ${spring.profiles.active}
+      username: nacos
+      password: nacos
+      server-addr: 127.0.0.1:8848
+
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8888/realms/ecommerce
+        registration:
+          ecommerce-postman:
+            provider: keycloak
+            client-id: ecommerce-postman
+#            client-secret: secret
+            scope:
+              - openid
+              - email
+              - profile
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8585/login/oauth2/code/ecommerce-postman
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'health, info, gateway'
+  endpoint:
+    gateway:
+      access: read_only

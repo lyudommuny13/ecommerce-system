@@ -1,12 +1,20 @@
-# Cange order service running port
+# Change order service running port
+# Run jar file command: java -jar order-service-main-0.0.1-SNAPSHOT.jar
+# Run change profile namespace: java -jar -Dspring.profiles.active=dev order-service-main-0.0.1-SNAPSHOT.jar
+# Run multiple port: java -jar -Dspring.profiles.active=prod -Dserver.port=8551 order-service-main-0.0.1-SNAPSHOT.jar
+
 server:
-  port: 0
+  port: 8550
+  forward-headers-strategy: framework
 
 spring:
   application:
     name: order-service
   profiles:
-    active: dev
+    active: dev # profile namespace
+  config:
+    import:
+      - nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension} # order-service.yaml
   cloud:
     nacos:
       discovery:
@@ -14,6 +22,10 @@ spring:
       username: nacos
       password: nacos
       server-addr: 127.0.0.1:8848
+      config:
+        file-extension: yaml # Make sure it match with file extension
+        namespace: ${spring.profiles.active} #(dev) The correct namespace
+
 
   datasource:
     hikari:
@@ -26,6 +38,7 @@ spring:
     username: ecommerce_usr
     password: qwerqwer
     url: jdbc:postgresql://localhost:8432/db_order
+
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -33,3 +46,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8888/realms/ecommerce
