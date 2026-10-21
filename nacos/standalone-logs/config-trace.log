@@ -1,4 +1,5 @@
-2026-10-05 09:50:20,427|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1791165020408|df9eb4e67179|persist|pub|-1|16a8be51452d4d6c32d8c55098ef01ad
-2026-10-05 09:50:20,471|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1791165020408|172.21.0.2|dump|ok|63|13
-2026-10-05 09:50:20,587|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1791165020587|null|persist|remove|-1|null
-2026-10-05 09:50:20,674|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1791165020587|172.21.0.2|dump|remove-ok|87|0
+2026-10-21 09:41:06,168|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1792546866152|df9eb4e67179|persist|pub|-1|7bf022af23f2d74f88971d1ae9a26219
+2026-10-21 09:41:06,245|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1792546866152|172.21.0.2|dump|ok|93|13
+2026-10-21 09:41:06,344|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1792546866344|null|persist|remove|-1|null
+2026-10-21 09:41:06,348|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1792546866344|172.21.0.2|dump|remove-ok|4|0
+2026-10-21 11:02:25,901|df9eb4e67179|order-service.yaml|DEFAULT_GROUP|dev|null|1790935083060|pull|ok|1616662841|172.18.224.1|false|grpc

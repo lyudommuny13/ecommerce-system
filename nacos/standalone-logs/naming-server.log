@@ -1,12 +1,56 @@
-2026-10-05 09:50:17,832 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+2026-10-21 09:41:03,500 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
 
-2026-10-05 09:50:17,832 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+2026-10-21 09:41:03,500 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
 
-2026-10-05 09:50:17,833 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+2026-10-21 09:41:03,501 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
 
-2026-10-05 09:50:17,833 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+2026-10-21 09:41:03,501 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
 
-2026-10-05 09:50:23,730 INFO [NamingServerHttpClientManager] Start destroying HTTP-Client
+2026-10-21 11:02:29,749 INFO Client connection 1792551749735_172.21.0.1_41448 connect
 
-2026-10-05 09:50:23,733 INFO [NamingServerHttpClientManager] Completed destruction of HTTP-Client
+2026-10-21 11:02:29,779 INFO Client change for service Service{namespace='dev', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, 1792551749735_172.21.0.1_41448
+
+2026-10-21 11:02:29,787 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@order-service,changed type ADD_SERVICE 
+
+2026-10-21 11:20:34,219 INFO Client connection 1792552834167_172.21.0.1_56812 connect
+
+2026-10-21 11:20:34,238 INFO Client change for service Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=0}, 1792552834167_172.21.0.1_56812
+
+2026-10-21 11:20:34,239 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@gateway-service,changed type ADD_SERVICE 
+
+2026-10-21 11:44:47,089 INFO Client remove for service Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=1}, 1792552834167_172.21.0.1_56812
+
+2026-10-21 11:44:47,091 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@gateway-service,changed type DELETE_SERVICE 
+
+2026-10-21 11:44:47,115 INFO Client connection 1792552834167_172.21.0.1_56812 disconnect, remove instances and subscribers
+
+2026-10-21 11:44:49,770 INFO Client remove for service Service{namespace='dev', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, 1792551749735_172.21.0.1_41448
+
+2026-10-21 11:44:49,770 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@order-service,changed type DELETE_SERVICE 
+
+2026-10-21 11:44:49,780 INFO Client connection 1792551749735_172.21.0.1_41448 disconnect, remove instances and subscribers
+
+2026-10-21 11:45:06,516 INFO Client connection 1792554306460_172.21.0.1_44250 connect
+
+2026-10-21 11:45:06,534 INFO Client change for service Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=2}, 1792554306460_172.21.0.1_44250
+
+2026-10-21 11:45:06,535 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@gateway-service,changed type ADD_SERVICE 
+
+2026-10-21 11:45:10,154 INFO Client connection 1792554310147_172.21.0.1_44266 connect
+
+2026-10-21 11:45:10,168 INFO Client change for service Service{namespace='dev', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=2}, 1792554310147_172.21.0.1_44266
+
+2026-10-21 11:45:10,168 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@order-service,changed type ADD_SERVICE 
+
+2026-10-21 12:00:52,349 INFO Client remove for service Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=3}, 1792554306460_172.21.0.1_44250
+
+2026-10-21 12:00:52,357 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@gateway-service,changed type DELETE_SERVICE 
+
+2026-10-21 12:00:52,387 INFO Client connection 1792554306460_172.21.0.1_44250 disconnect, remove instances and subscribers
+
+2026-10-21 12:01:10,095 INFO Client connection 1792555270036_172.21.0.1_41624 connect
+
+2026-10-21 12:01:10,118 INFO Client change for service Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=4}, 1792555270036_172.21.0.1_41624
+
+2026-10-21 12:01:10,119 WARN [fuzzy-watch] service change matched,service key dev@@DEFAULT_GROUP@@gateway-service,changed type ADD_SERVICE 
 
