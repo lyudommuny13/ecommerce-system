@@ -12,17 +12,21 @@ springdoc:
         url: /business-service/v3/api-docs
       - name: payment-service
         url: /payment-service/v3/api-docs
+      - name: user-service
+        url: /user-service/v3/api-docs
 
-#scalar:
-#  sources:
-#    - title: Order Service
-#      url: /order-service/v3/api-docs
-#    - title: Customer Service
-#      url: /customer-service/v3/api-docs
-#    - title: Business Service
-#      url: /business-service/v3/api-docs
-#    - title: Payment Service
-#      url: /payment-service/v3/api-docs
+scalar:
+  sources:
+    - title: Order Service
+      url: /order-service/v3/api-docs
+    - title: Customer Service
+      url: /customer-service/v3/api-docs
+    - title: Business Service
+      url: /business-service/v3/api-docs
+    - title: Payment Service
+      url: /payment-service/v3/api-docs
+    - title: User Service
+      url: /user-service/v3/api-docs
 
 spring:
   application:
@@ -37,11 +41,11 @@ spring:
     gateway:
       server:
         webflux:
-          routes:
-            - id: vuejs
-              uri: http://[::1]:5173
-              predicates:
-                - Path=/**
+#          routes:
+#            - id: vuejs
+#              uri: http://[::1]:5173
+#              predicates:
+#                - Path=/**
 #            - id: order-service
 #              uri: lb://order-service #lb = load balance, order-service is application name
 #              predicates:

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.1.1</version>
+        <version>4.1.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -24,6 +24,7 @@
         <module>customer-service</module>
         <module>payment-service</module>
         <module>gateway-service</module>
+        <module>user-service</module>
     </modules>
 
     <properties>
@@ -156,6 +157,31 @@
                 <artifactId>payment-service-main</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+
+            <!-- user-service -->
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>user-main</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>user-controller</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>user-entity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>user-biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
 
 
             <dependency>

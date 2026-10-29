@@ -1,6 +1,7 @@
 package ctm.mptc.kh.ecommerce.gateway;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
@@ -17,15 +18,21 @@ public class GatewaySecurityConfig {
 
     private final ReactiveClientRegistrationRepository clientRegistrationRepository;
 
+    @Bean
     SecurityWebFilterChain gatewayFilterChain(ServerHttpSecurity http) {
 
         http.authorizeExchange(exchange -> exchange
-//                .pathMatchers("/auth/**").authenticated()
-                .anyExchange().authenticated()
+
+                .pathMatchers("/auth/**", "/products", "/profile").authenticated()
+                //.pathMatchers( "/index.html", "/assets/**", "/favicon.ico").permitAll()
+                //.pathMatchers("/","/business/**", "/about/**").permitAll()
+                .anyExchange().permitAll()
         );
 
         http.csrf(ServerHttpSecurity.CsrfSpec::disable);
-        http.cors(ServerHttpSecurity.CorsSpec::disable);
+        http.httpBasic(ServerHttpSecurity.HttpBasicSpec::disable);
+        http.formLogin(ServerHttpSecurity.FormLoginSpec::disable);
+
         http.oauth2Login(Customizer.withDefaults());
         http.logout((logout) -> logout
                 .logoutSuccessHandler(oidcLogoutSuccessHandler())
@@ -33,6 +40,7 @@ public class GatewaySecurityConfig {
 
         return http.build();
     }
+
 
     private ServerLogoutSuccessHandler oidcLogoutSuccessHandler() {
         OidcClientInitiatedServerLogoutSuccessHandler oidcLogoutSuccessHandler =
@@ -44,4 +52,5 @@ public class GatewaySecurityConfig {
 
         return oidcLogoutSuccessHandler;
     }
+
 }
