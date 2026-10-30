@@ -20,6 +20,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -135,13 +138,28 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserResponse> getUsers() {
-        return keycloakUserService.getKeycloakUsers()
+        List<UserRepresentation> userRepresentations = keycloakUserService.getKeycloakUsers();
+
+        List<String> ids = userRepresentations.stream()
+                .map(UserRepresentation::getId)
+                .toList();
+
+        Map<String, UserEntity> userEntityMap = userRepository.findAllById(ids)
                 .stream()
-                .map(userRepresentation -> UserResponse.builder()
-                        .id(userRepresentation.getId())
-                        .familyName(userRepresentation.getFirstName())
-                        .givenName(userRepresentation.getLastName())
-                        .build())
+                .collect(Collectors.toMap(UserEntity::getId, Function.identity()));
+
+        return userRepresentations.stream()
+                .map(userRepresentation -> {
+                    UserEntity userEntity = userEntityMap.get(userRepresentation.getId());
+                    if (userEntity != null) {
+                        return userMapper.toResponse(userEntity, userRepresentation);
+                    }
+                    return UserResponse.builder()
+                            .id(userRepresentation.getId())
+                            .familyName(userRepresentation.getFirstName())
+                            .givenName(userRepresentation.getLastName())
+                            .build();
+                })
                 .toList();
     }
 
