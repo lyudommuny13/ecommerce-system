@@ -15,9 +15,9 @@ public interface UserMapper {
                 .id(userEntity.getId())
                 .familyName(userRepresentation.getFirstName())
                 .givenName(userRepresentation.getLastName())
-                .gender(userEntity.getGender())
                 .address(userEntity.getAddress())
                 .birthday(userEntity.getBirthday())
+                .gender(userEntity.getGender())
                 .mobilePhone(userEntity.getMobilePhone())
                 .build();
     }
@@ -32,4 +32,5 @@ public interface UserMapper {
     @Mapping(source = "familyName", target = "firstName")
     @Mapping(source = "givenName", target = "lastName")
     UserRepresentation toRepresentation(UserCreateRequest userCreateRequest);
+
 }

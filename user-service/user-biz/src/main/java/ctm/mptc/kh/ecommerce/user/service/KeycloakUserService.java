@@ -1,8 +1,8 @@
 package ctm.mptc.kh.ecommerce.user.service;
 
 import org.keycloak.representations.idm.UserRepresentation;
-
-import java.util.List;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 
 public interface KeycloakUserService {
 
@@ -10,11 +10,13 @@ public interface KeycloakUserService {
 
     UserRepresentation getKeycloakUserByUsername(String username);
 
-    UserRepresentation getKeycloakUserById(String id);
-
-    List<UserRepresentation> getKeycloakUsers();
-
     void updateKeycloakUser(String id, UserRepresentation userRepresentation);
 
-    void deleteKeycloakUser(String id);
+    UserRepresentation getKeycloakUserById(String id);
+
+    Slice<UserRepresentation> getKeycloakUsersByRoleName(String roleName, Pageable pageable);
+
+    Slice<UserRepresentation> getKeycloakUsers(Pageable pageable);
+
+    void deleteKeycloakUserById(String id);
 }

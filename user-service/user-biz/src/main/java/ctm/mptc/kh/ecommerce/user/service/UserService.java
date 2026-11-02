@@ -1,9 +1,11 @@
 package ctm.mptc.kh.ecommerce.user.service;
 
+import ctm.mptc.kh.ecommerce.restapi.dto.PageResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserCreateRequest;
 import ctm.mptc.kh.ecommerce.user.dto.UserResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserUpdateRequest;
-import java.util.List;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 public interface UserService {
 
@@ -11,13 +13,13 @@ public interface UserService {
 
     UserResponse update(String id, UserUpdateRequest userUpdateRequest);
 
-    UserResponse getUserById(String id);
+    UserResponse getById(String id);
 
-    List<UserResponse> getUsersByRoleName(String roleName);
+    void deleteById(String id);
 
-    List<UserResponse> getUsers();
+    UserResponse getByUsername(String username);
 
-    UserResponse getUserByUsername(String username);
+    PageResponse<UserResponse> getUsersByRoleName(String roleName, Pageable pageable);
 
-    void delete(String id);
+    PageResponse<UserResponse> getUsers(PageRequest of);
 }

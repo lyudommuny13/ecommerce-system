@@ -1,10 +1,12 @@
 package ctm.mptc.kh.ecommerce.user.service.impl;
 
-import ctm.mptc.kh.ecommerce.restapi.exception.PasswordMismatchException;
+import ctm.mptc.kh.ecommerce.restapi.dto.PageResponse;
+import ctm.mptc.kh.ecommerce.user.exception.PasswordMismatchException;
 import ctm.mptc.kh.ecommerce.user.dto.UserCreateRequest;
 import ctm.mptc.kh.ecommerce.user.dto.UserResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserUpdateRequest;
 import ctm.mptc.kh.ecommerce.user.entity.UserEntity;
+import ctm.mptc.kh.ecommerce.user.exception.UserHybridDataInconsistencyException;
 import ctm.mptc.kh.ecommerce.user.exception.UserNotFoundException;
 import ctm.mptc.kh.ecommerce.user.exception.UsernameConflictException;
 import ctm.mptc.kh.ecommerce.user.mapper.UserMapper;
@@ -16,13 +18,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -74,16 +76,19 @@ public class UserServiceImpl implements UserService {
         userEntity.setId(createdUser.getId());
         userRepository.save(userEntity);
 
-
-
         return userMapper.toResponse(userEntity, createdUser);
     }
 
+
     @Override
-    public UserResponse update(String id,UserUpdateRequest userUpdateRequest) {
+    public UserResponse update(String id, UserUpdateRequest userUpdateRequest) {
+
         UserEntity userEntity = userRepository
                 .findById(id)
-                .orElseThrow(() -> new UserNotFoundException(HttpStatus.NOT_FOUND, "User not found"));
+                .orElseThrow(() -> new UserNotFoundException(
+                        HttpStatus.NOT_FOUND,
+                        "User not found"
+                ));
 
         userMapper.toEntity(userUpdateRequest, userEntity);
         userRepository.save(userEntity);
@@ -91,7 +96,7 @@ public class UserServiceImpl implements UserService {
         UserRepresentation userRepresentation = keycloakUserService
                 .getKeycloakUserByUsername(userEntity.getUsername());
 
-        // Attempt to Keycloak user
+        // Attempt to Keycloak data
         if (!(userUpdateRequest.familyName() == null && userUpdateRequest.givenName() == null)) {
             if (userUpdateRequest.familyName() != null) {
                 userRepresentation.setFirstName(userUpdateRequest.familyName());
@@ -108,11 +113,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponse getUserById(String id) {
+    public UserResponse getById(String id) {
         UserEntity userEntity = userRepository
                 .findById(id)
-                .orElseThrow(() -> new UserNotFoundException(HttpStatus.NOT_FOUND, "User not found"));
-
+                .orElseThrow(() -> new UserNotFoundException(
+                        HttpStatus.NOT_FOUND,
+                        "User not found"
+                ));
         UserRepresentation userRepresentation = keycloakUserService.getKeycloakUserById(id);
 
         return userMapper.toResponse(
@@ -122,68 +129,60 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserResponse> getUsersByRoleName(String roleName) {
-        return keycloakRoleService.getUsersByRoleName(roleName)
-                .stream()
-                .map(userRepresentation -> userRepository
-                        .findById(userRepresentation.getId())
-                        .map(userEntity -> userMapper.toResponse(userEntity, userRepresentation))
-                        .orElseGet(() -> UserResponse.builder()
-                                .id(userRepresentation.getId())
-                                .familyName(userRepresentation.getFirstName())
-                                .givenName(userRepresentation.getLastName())
-                                .build()))
-                .toList();
-    }
-
-    @Override
-    public List<UserResponse> getUsers() {
-        List<UserRepresentation> userRepresentations = keycloakUserService.getKeycloakUsers();
-
-        List<String> ids = userRepresentations.stream()
-                .map(UserRepresentation::getId)
-                .toList();
-
-        Map<String, UserEntity> userEntityMap = userRepository.findAllById(ids)
-                .stream()
-                .collect(Collectors.toMap(UserEntity::getId, Function.identity()));
-
-        return userRepresentations.stream()
-                .map(userRepresentation -> {
-                    UserEntity userEntity = userEntityMap.get(userRepresentation.getId());
-                    if (userEntity != null) {
-                        return userMapper.toResponse(userEntity, userRepresentation);
-                    }
-                    return UserResponse.builder()
-                            .id(userRepresentation.getId())
-                            .familyName(userRepresentation.getFirstName())
-                            .givenName(userRepresentation.getLastName())
-                            .build();
-                })
-                .toList();
-    }
-
-    @Override
-    public UserResponse getUserByUsername(String username) {
+    public UserResponse getByUsername(String username) {
+        UserEntity userEntity = userRepository
+                .findByUsername(username)
+                .orElseThrow(() -> new UserNotFoundException(
+                        HttpStatus.NOT_FOUND,
+                        "User not found"
+                ));
         UserRepresentation userRepresentation = keycloakUserService.getKeycloakUserByUsername(username);
 
-        return userRepository
-                .findById(userRepresentation.getId())
-                .map(userEntity -> userMapper.toResponse(userEntity, userRepresentation))
-                .orElseGet(() -> UserResponse.builder()
-                        .id(userRepresentation.getId())
-                        .familyName(userRepresentation.getFirstName())
-                        .givenName(userRepresentation.getLastName())
-                        .build());
+        return userMapper.toResponse(
+                userEntity,
+                userRepresentation
+        );
     }
 
     @Override
-    public void delete(String id) {
-        keycloakUserService.deleteKeycloakUser(id);
+    public PageResponse<UserResponse> getUsersByRoleName(String roleName, Pageable pageable) {
+        Slice<UserRepresentation> userRepresentationSlice = keycloakUserService.getKeycloakUsersByRoleName(roleName, pageable);
+        return mergeUserEntityWithUserRepresentation(userRepresentationSlice);
+    }
 
-        if (userRepository.existsById(id)) {
-            userRepository.deleteById(id);
-        }
+    @Override
+    public PageResponse<UserResponse> getUsers(PageRequest pageable) {
+        Slice<UserRepresentation> userRepresentationSlice = keycloakUserService.getKeycloakUsers(pageable);
+        return mergeUserEntityWithUserRepresentation(userRepresentationSlice);
+    }
+
+    @Override
+    public void deleteById(String id) {
+        UserEntity userEntity = userRepository
+                .findById(id)
+                .orElseThrow(() -> new UserNotFoundException(
+                        HttpStatus.NOT_FOUND,
+                        "User not found"
+                ));
+        userRepository.delete(userEntity);
+        keycloakUserService.deleteKeycloakUserById(id);
+    }
+
+    private PageResponse<UserResponse> mergeUserEntityWithUserRepresentation(Slice<UserRepresentation> userRepresentationSlice) {
+        List<UserResponse> userResponseList = userRepresentationSlice
+                .map(userRepresentation -> {
+                    UserEntity userEntity = userRepository.findById(userRepresentation.getId())
+                            .orElseThrow(() -> new UserHybridDataInconsistencyException(HttpStatus.INTERNAL_SERVER_ERROR,
+                                    "User hybrid data is inconsistent"));
+                    return userMapper.toResponse(userEntity, userRepresentation);
+                })
+                .toList();
+        return PageResponse.<UserResponse>builder()
+                .items(userResponseList)
+                .page(userRepresentationSlice.getNumber())
+                .size(userRepresentationSlice.getSize())
+                .hasNext(userRepresentationSlice.hasNext())
+                .build();
     }
 
 }

@@ -1,15 +1,15 @@
 package ctm.mptc.kh.ecommerce.user.controller;
 
+import ctm.mptc.kh.ecommerce.restapi.dto.PageResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserCreateRequest;
 import ctm.mptc.kh.ecommerce.user.dto.UserResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserUpdateRequest;
 import ctm.mptc.kh.ecommerce.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
@@ -24,34 +24,39 @@ public class UserController {
         return userService.create(userCreateRequest);
     }
 
-    @GetMapping("/role/{roleName}")
-    public List<UserResponse> getUsersByRoleName(@PathVariable String roleName) {
-        return userService.getUsersByRoleName(roleName);
-    }
-
-    @GetMapping
-    public List<UserResponse> getUsers() {
-        return userService.getUsers();
-    }
-
-    @GetMapping("/{id}")
-    public UserResponse getUserById(@PathVariable String id) {
-        return userService.getUserById(id);
-    }
-
-    @GetMapping("/username/{username}")
-    public UserResponse getUserByUsername(@PathVariable String username) {
-        return userService.getUserByUsername(username);
-    }
-
     @PatchMapping("/{id}")
     public UserResponse update(@PathVariable String id,
                                @RequestBody UserUpdateRequest userUpdateRequest) {
         return userService.update(id, userUpdateRequest);
     }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id) {
-        userService.delete(id);
+    @GetMapping("/{id}")
+    public UserResponse getById(@PathVariable String id) {
+        return userService.getById(id);
     }
+
+    @GetMapping("/username/{username}")
+    public UserResponse getByUsername(@PathVariable String username) {
+        return userService.getByUsername(username);
+    }
+
+    @GetMapping("/roles/{roleName}")
+    public PageResponse<UserResponse> getUsersByRoleName(@PathVariable String roleName,
+                                                         @RequestParam(defaultValue = "0", required = false) int pageNumber,
+                                                         @RequestParam(defaultValue = "15", required = false) int pageSize) {
+        return userService.getUsersByRoleName(roleName, PageRequest.of(pageNumber, pageSize));
+    }
+
+    @GetMapping
+    public PageResponse<UserResponse> getUsers(@RequestParam(defaultValue = "0", required = false) int pageNumber,
+                                               @RequestParam(defaultValue = "15", required = false) int pageSize) {
+        return userService.getUsers(PageRequest.of(pageNumber, pageSize));
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable String id) {
+        userService.deleteById(id);
+    }
+
 }
