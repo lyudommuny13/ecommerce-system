@@ -768,3 +768,15 @@ ErrCode:400, ErrMsg:Skill name may only contain lowercase letters, numbers, and 
 
 2026-11-04 10:25:13,287 WARN history config cleaner successfully
 
+2026-11-04 10:35:06,287 INFO [capacityManagement] start correct usage
+
+2026-11-04 10:35:06,521 INFO [capacityManagement] end correct usage, cost: 0.232132451s
+
+2026-11-04 10:35:13,249 WARN clearHistoryConfig get scheduled
+
+2026-11-04 10:35:13,252 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2026-11-04 10:35:13,254 WARN clearConfigHistory, getBeforeStamp:2026-10-05 10:35:13.0, pageSize:1000
+
+2026-11-04 10:35:13,258 WARN history config cleaner successfully
+

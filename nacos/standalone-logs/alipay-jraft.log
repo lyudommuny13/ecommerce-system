@@ -274,3 +274,5 @@ peers: "df9eb4e67179:7848"
 
 2026-11-04 10:30:36,854 INFO Truncated prefix logs in data path: /home/nacos/data/protocol/raft/naming_service_metadata/log from log index 23 to 24, cost 0 ms.
 
+2026-11-04 10:30:48,026 INFO Truncated prefix logs in data path: /home/nacos/data/protocol/raft/lock_acquire_service_v2/log from log index 23 to 24, cost 1 ms.
+
