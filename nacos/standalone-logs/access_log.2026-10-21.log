@@ -113,3 +113,4 @@
 172.21.0.1 - - [21/Oct/2026:12:29:24 +0800] "GET /v3/console/server/state?username=nacos HTTP/1.1" 200 735 6680 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 -
 172.21.0.1 - - [21/Oct/2026:12:29:24 +0800] "GET /v3/console/core/namespace/list?username=nacos HTTP/1.1" 200 454 21826 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 -
 172.21.0.1 - - [21/Oct/2026:12:29:24 +0800] "GET /v3/console/ns/service/list?namespaceId=dev&ignoreEmptyService=true&pageNo=1&pageSize=10&username=nacos HTTP/1.1" 200 374 131323 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 -
+172.21.0.1 - - [21/Oct/2026:12:34:10 +0800] "POST /nacos/v3/auth/user/login?username=nacos HTTP/1.1" 200 192 64260 Java/25.0.4 -

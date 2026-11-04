@@ -1,0 +1,288 @@
+2026-10-28 09:43:20,241 INFO notifyConnectTimeout:100
+
+2026-10-28 09:43:20,254 INFO notifySocketTimeout:200
+
+2026-10-28 09:43:20,255 INFO isHealthCheck:true
+
+2026-10-28 09:43:20,256 INFO maxHealthCheckFailCount:12
+
+2026-10-28 09:43:20,257 INFO maxContent:10485760
+
+2026-10-28 09:43:24,592 INFO All dump page size is set to 100 according to mem limit 1024 MB
+
+2026-10-28 09:43:24,596 WARN DumpService start
+
+2026-10-28 09:43:24,597 INFO start clear all config-info.
+
+2026-10-28 09:43:24,598 INFO clear all config-info success.
+
+2026-10-28 09:43:24,706 INFO clear all config-info-tenant success.
+
+2026-10-28 09:43:24,718 INFO start dump all config-info...
+
+2026-10-28 09:43:24,774 INFO [all-dump] submit all task for 1079215964857311232 / 1080060110509711360, dbTime=48,diskTime=7
+
+2026-10-28 09:43:24,821 INFO [all-dump] submit all task for 1079215967696855040 / 1080060110509711360, dbTime=46,diskTime=0
+
+2026-10-28 09:43:24,867 INFO [all-dump] submit all task for 1079215970955829250 / 1080060110509711360, dbTime=44,diskTime=1
+
+2026-10-28 09:43:24,887 INFO [all-dump] submit all task for 1079215974504210432 / 1080060110509711360, dbTime=19,diskTime=1
+
+2026-10-28 09:43:24,892 INFO [all-dump] submit all task for 1079215975598923777 / 1080060110509711360, dbTime=4,diskTime=1
+
+2026-10-28 09:43:24,951 INFO [all-dump] submit all task for 1079215977134039040 / 1080060110509711360, dbTime=17,diskTime=41
+
+2026-10-28 09:43:25,103 INFO [all-dump] submit all task for 1079215978438467584 / 1080060110509711360, dbTime=27,diskTime=124
+
+2026-10-28 09:43:25,178 INFO [all-dump] submit all task for 1079215979692564480 / 1080060110509711360, dbTime=5,diskTime=69
+
+2026-10-28 09:43:25,292 INFO [all-dump] submit all task for 1079215980959244288 / 1080060110509711360, dbTime=2,diskTime=111
+
+2026-10-28 09:43:25,390 INFO [all-dump] submit all task for 1079215982263672832 / 1080060110509711360, dbTime=12,diskTime=86
+
+2026-10-28 09:43:25,480 INFO [all-dump] submit all task for 1079215983698124800 / 1080060110509711360, dbTime=5,diskTime=84
+
+2026-10-28 09:43:25,571 INFO [all-dump] submit all task for 1079215984755089408 / 1080060110509711360, dbTime=6,diskTime=84
+
+2026-10-28 09:43:25,642 INFO [all-dump] submit all task for 1079215986147598336 / 1080060110509711360, dbTime=6,diskTime=65
+
+2026-10-28 09:43:25,734 INFO [all-dump] submit all task for 1079215987342974976 / 1080060110509711360, dbTime=4,diskTime=88
+
+2026-10-28 09:43:25,831 INFO [all-dump] submit all task for 1079215988802592768 / 1080060110509711360, dbTime=13,diskTime=83
+
+2026-10-28 09:43:25,953 INFO [all-dump] submit all task for 1079215989922471936 / 1080060110509711360, dbTime=6,diskTime=116
+
+2026-10-28 09:43:26,046 INFO [all-dump] submit all task for 1079215991176568832 / 1080060110509711360, dbTime=3,diskTime=90
+
+2026-10-28 09:43:26,196 INFO [all-dump] submit all task for 1079215992921399296 / 1080060110509711360, dbTime=3,diskTime=146
+
+2026-10-28 09:43:26,294 INFO [all-dump] submit all task for 1079215994506846208 / 1080060110509711360, dbTime=3,diskTime=94
+
+2026-10-28 09:43:26,368 INFO [all-dump] submit all task for 1079215995811274752 / 1080060110509711360, dbTime=4,diskTime=69
+
+2026-10-28 09:43:26,452 INFO [all-dump] submit all task for 1079215997459636224 / 1080060110509711360, dbTime=2,diskTime=81
+
+2026-10-28 09:43:26,513 INFO [all-dump] submit all task for 1079215999187689473 / 1080060110509711360, dbTime=3,diskTime=58
+
+2026-10-28 09:43:26,606 INFO [all-dump] submit all task for 1079216000940908544 / 1080060110509711360, dbTime=2,diskTime=90
+
+2026-10-28 09:43:26,695 INFO [all-dump] submit all task for 1079216002232754176 / 1080060110509711360, dbTime=2,diskTime=86
+
+2026-10-28 09:43:26,771 INFO [all-dump] submit all task for 1079216003872727040 / 1080060110509711360, dbTime=4,diskTime=72
+
+2026-10-28 09:43:26,882 INFO [all-dump] submit all task for 1079216005470756864 / 1080060110509711360, dbTime=4,diskTime=107
+
+2026-10-28 09:43:26,953 INFO [all-dump] submit all task for 1079216006947151872 / 1080060110509711360, dbTime=2,diskTime=68
+
+2026-10-28 09:43:27,064 INFO [all-dump] submit all task for 1079216008369020928 / 1080060110509711360, dbTime=4,diskTime=107
+
+2026-10-28 09:43:27,146 INFO [all-dump] submit all task for 1079216010180960256 / 1080060110509711360, dbTime=2,diskTime=80
+
+2026-10-28 09:43:27,219 INFO [all-dump] submit all task for 1079216012013871105 / 1080060110509711360, dbTime=3,diskTime=69
+
+2026-10-28 09:43:27,292 INFO [all-dump] submit all task for 1079216013830004736 / 1080060110509711360, dbTime=2,diskTime=70
+
+2026-10-28 09:43:27,366 INFO [all-dump] submit all task for 1079216015662915584 / 1080060110509711360, dbTime=4,diskTime=70
+
+2026-10-28 09:43:27,467 INFO [all-dump] submit all task for 1079216017382580224 / 1080060110509711360, dbTime=2,diskTime=98
+
+2026-10-28 09:43:27,554 INFO [all-dump] submit all task for 1079216019194519552 / 1080060110509711360, dbTime=2,diskTime=84
+
+2026-10-28 09:43:27,659 INFO [all-dump] submit all task for 1079216021023236096 / 1080060110509711360, dbTime=5,diskTime=99
+
+2026-10-28 09:43:27,702 INFO [all-dump] submit all task for 1079216022851952640 / 1080060110509711360, dbTime=2,diskTime=41
+
+2026-10-28 09:43:27,752 INFO [all-dump] submit all task for 1079216024697446400 / 1080060110509711360, dbTime=2,diskTime=48
+
+2026-10-28 09:43:27,802 INFO [all-dump] submit all task for 1079216026521968640 / 1080060110509711360, dbTime=2,diskTime=47
+
+2026-10-28 09:43:27,863 INFO [all-dump] submit all task for 1079216028107415552 / 1080060110509711360, dbTime=2,diskTime=59
+
+2026-10-28 09:43:27,905 INFO [all-dump] submit all task for 1079216030015823872 / 1080060110509711360, dbTime=3,diskTime=39
+
+2026-10-28 09:43:27,939 INFO [all-dump] submit all task for 1079216038626729984 / 1080060110509711360, dbTime=2,diskTime=31
+
+2026-10-28 09:43:27,979 INFO [all-dump] submit all task for 1079216046893703168 / 1080060110509711360, dbTime=2,diskTime=37
+
+2026-10-28 09:43:28,040 INFO [all-dump] submit all task for 1079216053965299712 / 1080060110509711360, dbTime=2,diskTime=58
+
+2026-10-28 09:43:28,085 INFO [all-dump] submit all task for 1079216060575522816 / 1080060110509711360, dbTime=2,diskTime=43
+
+2026-10-28 09:43:28,126 INFO [all-dump] submit all task for 1079216062815281152 / 1080060110509711360, dbTime=2,diskTime=39
+
+2026-10-28 09:43:28,147 INFO [all-dump] submit all task for 1080060110509711360 / 1080060110509711360, dbTime=1,diskTime=20
+
+2026-10-28 09:43:28,147 INFO [all-dump] wait 214 dump tasks to be finished
+
+2026-10-28 09:43:29,148 INFO success to  dump all config-info。
+
+2026-10-28 09:43:29,150 INFO start to clear all gray-config-info on startup.
+
+2026-10-28 09:43:29,152 INFO clear all config-info-gray success.
+
+2026-10-28 09:43:29,153 INFO clear all config-info-gray-tenant success.
+
+2026-10-28 09:43:32,290 INFO notifyConnectTimeout:100
+
+2026-10-28 09:43:32,291 INFO notifySocketTimeout:200
+
+2026-10-28 09:43:32,292 INFO isHealthCheck:true
+
+2026-10-28 09:43:32,292 INFO maxHealthCheckFailCount:12
+
+2026-10-28 09:43:32,293 INFO maxContent:10485760
+
+2026-10-28 09:43:34,278 INFO notifyConnectTimeout:100
+
+2026-10-28 09:43:34,279 INFO notifySocketTimeout:200
+
+2026-10-28 09:43:34,280 INFO isHealthCheck:true
+
+2026-10-28 09:43:34,280 INFO maxHealthCheckFailCount:12
+
+2026-10-28 09:43:34,281 INFO maxContent:10485760
+
+2026-10-28 17:05:20,395 INFO notifyConnectTimeout:100
+
+2026-10-28 17:05:20,397 INFO notifySocketTimeout:200
+
+2026-10-28 17:05:20,398 INFO isHealthCheck:true
+
+2026-10-28 17:05:20,399 INFO maxHealthCheckFailCount:12
+
+2026-10-28 17:05:20,399 INFO maxContent:10485760
+
+2026-10-28 17:05:24,632 INFO All dump page size is set to 100 according to mem limit 1024 MB
+
+2026-10-28 17:05:24,638 WARN DumpService start
+
+2026-10-28 17:05:24,639 INFO start clear all config-info.
+
+2026-10-28 17:05:24,641 INFO clear all config-info success.
+
+2026-10-28 17:05:24,910 INFO clear all config-info-tenant success.
+
+2026-10-28 17:05:24,920 INFO start dump all config-info...
+
+2026-10-28 17:05:24,990 INFO [all-dump] submit all task for 1079215964857311232 / 1080060110509711360, dbTime=62,diskTime=7
+
+2026-10-28 17:05:25,049 INFO [all-dump] submit all task for 1079215967696855040 / 1080060110509711360, dbTime=58,diskTime=0
+
+2026-10-28 17:05:25,097 INFO [all-dump] submit all task for 1079215970955829250 / 1080060110509711360, dbTime=47,diskTime=0
+
+2026-10-28 17:05:25,120 INFO [all-dump] submit all task for 1079215974504210432 / 1080060110509711360, dbTime=23,diskTime=0
+
+2026-10-28 17:05:25,124 INFO [all-dump] submit all task for 1079215975598923777 / 1080060110509711360, dbTime=3,diskTime=0
+
+2026-10-28 17:05:25,254 INFO [all-dump] submit all task for 1079215977134039040 / 1080060110509711360, dbTime=42,diskTime=87
+
+2026-10-28 17:05:25,358 INFO [all-dump] submit all task for 1079215978438467584 / 1080060110509711360, dbTime=6,diskTime=97
+
+2026-10-28 17:05:25,445 INFO [all-dump] submit all task for 1079215979692564480 / 1080060110509711360, dbTime=8,diskTime=79
+
+2026-10-28 17:05:25,533 INFO [all-dump] submit all task for 1079215980959244288 / 1080060110509711360, dbTime=2,diskTime=85
+
+2026-10-28 17:05:25,633 INFO [all-dump] submit all task for 1079215982263672832 / 1080060110509711360, dbTime=17,diskTime=82
+
+2026-10-28 17:05:25,734 INFO [all-dump] submit all task for 1079215983698124800 / 1080060110509711360, dbTime=10,diskTime=91
+
+2026-10-28 17:05:25,839 INFO [all-dump] submit all task for 1079215984755089408 / 1080060110509711360, dbTime=6,diskTime=99
+
+2026-10-28 17:05:25,995 INFO [all-dump] submit all task for 1079215986147598336 / 1080060110509711360, dbTime=8,diskTime=148
+
+2026-10-28 17:05:26,084 INFO [all-dump] submit all task for 1079215987342974976 / 1080060110509711360, dbTime=5,diskTime=83
+
+2026-10-28 17:05:26,192 INFO [all-dump] submit all task for 1079215988802592768 / 1080060110509711360, dbTime=17,diskTime=90
+
+2026-10-28 17:05:26,283 INFO [all-dump] submit all task for 1079215989922471936 / 1080060110509711360, dbTime=7,diskTime=84
+
+2026-10-28 17:05:26,379 INFO [all-dump] submit all task for 1079215991176568832 / 1080060110509711360, dbTime=3,diskTime=93
+
+2026-10-28 17:05:26,517 INFO [all-dump] submit all task for 1079215992921399296 / 1080060110509711360, dbTime=3,diskTime=134
+
+2026-10-28 17:05:26,607 INFO [all-dump] submit all task for 1079215994506846208 / 1080060110509711360, dbTime=3,diskTime=86
+
+2026-10-28 17:05:26,696 INFO [all-dump] submit all task for 1079215995811274752 / 1080060110509711360, dbTime=3,diskTime=85
+
+2026-10-28 17:05:26,788 INFO [all-dump] submit all task for 1079215997459636224 / 1080060110509711360, dbTime=3,diskTime=89
+
+2026-10-28 17:05:26,887 INFO [all-dump] submit all task for 1079215999187689473 / 1080060110509711360, dbTime=3,diskTime=95
+
+2026-10-28 17:05:27,016 INFO [all-dump] submit all task for 1079216000940908544 / 1080060110509711360, dbTime=3,diskTime=126
+
+2026-10-28 17:05:27,116 INFO [all-dump] submit all task for 1079216002232754176 / 1080060110509711360, dbTime=2,diskTime=97
+
+2026-10-28 17:05:27,208 INFO [all-dump] submit all task for 1079216003872727040 / 1080060110509711360, dbTime=3,diskTime=88
+
+2026-10-28 17:05:27,296 INFO [all-dump] submit all task for 1079216005470756864 / 1080060110509711360, dbTime=4,diskTime=84
+
+2026-10-28 17:05:27,422 INFO [all-dump] submit all task for 1079216006947151872 / 1080060110509711360, dbTime=4,diskTime=121
+
+2026-10-28 17:05:27,510 INFO [all-dump] submit all task for 1079216008369020928 / 1080060110509711360, dbTime=4,diskTime=84
+
+2026-10-28 17:05:27,641 INFO [all-dump] submit all task for 1079216010180960256 / 1080060110509711360, dbTime=2,diskTime=128
+
+2026-10-28 17:05:27,732 INFO [all-dump] submit all task for 1079216012013871105 / 1080060110509711360, dbTime=3,diskTime=87
+
+2026-10-28 17:05:27,826 INFO [all-dump] submit all task for 1079216013830004736 / 1080060110509711360, dbTime=3,diskTime=90
+
+2026-10-28 17:05:27,909 INFO [all-dump] submit all task for 1079216015662915584 / 1080060110509711360, dbTime=3,diskTime=79
+
+2026-10-28 17:05:28,013 INFO [all-dump] submit all task for 1079216017382580224 / 1080060110509711360, dbTime=2,diskTime=101
+
+2026-10-28 17:05:28,093 INFO [all-dump] submit all task for 1079216019194519552 / 1080060110509711360, dbTime=2,diskTime=77
+
+2026-10-28 17:05:28,209 INFO [all-dump] submit all task for 1079216021023236096 / 1080060110509711360, dbTime=4,diskTime=112
+
+2026-10-28 17:05:28,280 INFO [all-dump] submit all task for 1079216022851952640 / 1080060110509711360, dbTime=2,diskTime=68
+
+2026-10-28 17:05:28,363 INFO [all-dump] submit all task for 1079216024697446400 / 1080060110509711360, dbTime=6,diskTime=77
+
+2026-10-28 17:05:28,474 INFO [all-dump] submit all task for 1079216026521968640 / 1080060110509711360, dbTime=4,diskTime=107
+
+2026-10-28 17:05:28,556 INFO [all-dump] submit all task for 1079216028107415552 / 1080060110509711360, dbTime=4,diskTime=78
+
+2026-10-28 17:05:28,639 INFO [all-dump] submit all task for 1079216030015823872 / 1080060110509711360, dbTime=5,diskTime=78
+
+2026-10-28 17:05:28,722 INFO [all-dump] submit all task for 1079216038626729984 / 1080060110509711360, dbTime=6,diskTime=76
+
+2026-10-28 17:05:28,829 INFO [all-dump] submit all task for 1079216046893703168 / 1080060110509711360, dbTime=4,diskTime=102
+
+2026-10-28 17:05:28,908 INFO [all-dump] submit all task for 1079216053965299712 / 1080060110509711360, dbTime=4,diskTime=75
+
+2026-10-28 17:05:29,018 INFO [all-dump] submit all task for 1079216060575522816 / 1080060110509711360, dbTime=5,diskTime=104
+
+2026-10-28 17:05:29,102 INFO [all-dump] submit all task for 1079216062815281152 / 1080060110509711360, dbTime=4,diskTime=79
+
+2026-10-28 17:05:29,145 INFO [all-dump] submit all task for 1080060110509711360 / 1080060110509711360, dbTime=3,diskTime=39
+
+2026-10-28 17:05:29,145 INFO [all-dump] wait 202 dump tasks to be finished
+
+2026-10-28 17:05:30,147 INFO success to  dump all config-info。
+
+2026-10-28 17:05:30,148 INFO start to clear all gray-config-info on startup.
+
+2026-10-28 17:05:30,149 INFO clear all config-info-gray success.
+
+2026-10-28 17:05:30,149 INFO clear all config-info-gray-tenant success.
+
+2026-10-28 17:05:34,174 INFO notifyConnectTimeout:100
+
+2026-10-28 17:05:34,175 INFO notifySocketTimeout:200
+
+2026-10-28 17:05:34,176 INFO isHealthCheck:true
+
+2026-10-28 17:05:34,177 INFO maxHealthCheckFailCount:12
+
+2026-10-28 17:05:34,177 INFO maxContent:10485760
+
+2026-10-28 17:05:36,295 INFO notifyConnectTimeout:100
+
+2026-10-28 17:05:36,296 INFO notifySocketTimeout:200
+
+2026-10-28 17:05:36,296 INFO isHealthCheck:true
+
+2026-10-28 17:05:36,297 INFO maxHealthCheckFailCount:12
+
+2026-10-28 17:05:36,298 INFO maxContent:10485760
+

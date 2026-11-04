@@ -1,0 +1,12 @@
+2026-10-30 09:32:15,465 INFO [PUSH] Task merge for Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=2}
+
+2026-10-30 09:33:36,160 INFO [PUSH] Task merge for Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=3}
+
+2026-10-30 09:33:36,716 INFO [PUSH-SUCC] 14ms, all delay time 597ms, SLA 598ms, Service{namespace='dev', group='DEFAULT_GROUP', name='gateway-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1, target=172.18.224.1
+
+2026-10-30 09:33:36,736 INFO [PUSH-SUCC] 34ms, all delay time 576ms for subscriber 172.18.224.1, Service{namespace='dev', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2026-10-30 09:47:48,862 INFO [PUSH-SUCC] 6ms, all delay time 606ms, SLA 606ms, Service{namespace='dev', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=2}, originalSize=0, DataSize=0, target=172.18.224.1
+
+2026-10-30 09:48:11,917 INFO [PUSH-SUCC] 7ms, all delay time 578ms, SLA 578ms, Service{namespace='dev', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1, target=172.18.224.1
+
