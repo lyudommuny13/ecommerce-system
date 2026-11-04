@@ -1,5 +1,0 @@
-2026-10-30 09:32:14,191|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1793323934177|df9eb4e67179|persist|pub|-1|2aba38932f652ace5df01cf7b02a7461
-2026-10-30 09:32:14,241|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1793323934177|172.21.0.2|dump|ok|64|13
-2026-10-30 09:32:14,359|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1793323934359|null|persist|remove|-1|null
-2026-10-30 09:32:14,446|df9eb4e67179|nacos.ai.skills.bootstrap|nacos_internal|public|null|1793323934359|172.21.0.2|dump|remove-ok|87|0
-2026-10-30 09:48:05,870|df9eb4e67179|user-service.yaml|DEFAULT_GROUP|dev|null|-1|pull|not-found|-1|172.18.224.1|false|grpc
