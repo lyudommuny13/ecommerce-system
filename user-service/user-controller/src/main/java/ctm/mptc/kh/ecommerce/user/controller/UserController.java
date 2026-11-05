@@ -1,5 +1,8 @@
 package ctm.mptc.kh.ecommerce.user.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.alibaba.csp.sentinel.slots.block.degrade.DegradeException;
 import ctm.mptc.kh.ecommerce.restapi.dto.PageResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserCreateRequest;
 import ctm.mptc.kh.ecommerce.user.dto.UserResponse;
@@ -10,6 +13,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")
@@ -40,12 +46,32 @@ public class UserController {
         return userService.getByUsername(username);
     }
 
+    @SentinelResource(
+            value = "getUsersByRoleName",
+            fallback = "getUsersByRoleNameFallback"
+//            blockHandler = "getUsersByRoleNameBlocked"
+    )
     @GetMapping("/roles/{roleName}")
     public PageResponse<UserResponse> getUsersByRoleName(@PathVariable String roleName,
                                                          @RequestParam(defaultValue = "0", required = false) int pageNumber,
                                                          @RequestParam(defaultValue = "15", required = false) int pageSize) {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return userService.getUsersByRoleName(roleName, PageRequest.of(pageNumber, pageSize));
     }
+
+//    public String getUsersByRoleNameFallback(Throwable t) {
+//        return "getUsersByRoleName fallback";
+//    }
+
+//    public PageResponse<UserResponse> getUsersByRoleNameBlocked(String roleName, int pageNumber, int pageSize, BlockException e) {
+//        return PageResponse.<UserResponse>builder()
+//                .items(List.of())
+//                .build();
+//    }
 
     @GetMapping
     public PageResponse<UserResponse> getUsers(@RequestParam(defaultValue = "0", required = false) int pageNumber,

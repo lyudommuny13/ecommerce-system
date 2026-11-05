@@ -12,6 +12,15 @@ spring:
     import:
       - nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension} # order-service.yaml
   cloud:
+    # Sentinel
+    sentinel:
+      transport:
+        dashboard: localhost:8081
+        port: 8719
+      eager: true
+      web-context-unify: false
+
+    # Nacos
     nacos:
       discovery:
         namespace: ${spring.profiles.active}
