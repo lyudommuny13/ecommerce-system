@@ -1,6 +1,6 @@
 package ctm.mptc.kh.ecommerce.user.service;
 
-import ctm.mptc.kh.ecommerce.restapi.dto.PageResponse;
+import ctm.mptc.kh.ecommerce.core.PageResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserCreateRequest;
 import ctm.mptc.kh.ecommerce.user.dto.UserResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserUpdateRequest;

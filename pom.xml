@@ -54,6 +54,11 @@
                 <artifactId>common-persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <!-- order-service -->
             <dependency>
@@ -133,6 +138,11 @@
             <dependency>
                 <groupId>ctm.mptc.kh</groupId>
                 <artifactId>customer-service-main</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ctm.mptc.kh</groupId>
+                <artifactId>customer-service-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

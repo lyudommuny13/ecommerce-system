@@ -1,6 +1,6 @@
 package ctm.mptc.kh.ecommerce.user.service.impl;
 
-import ctm.mptc.kh.ecommerce.restapi.dto.PageResponse;
+import ctm.mptc.kh.ecommerce.core.PageResponse;
 import ctm.mptc.kh.ecommerce.user.exception.PasswordMismatchException;
 import ctm.mptc.kh.ecommerce.user.dto.UserCreateRequest;
 import ctm.mptc.kh.ecommerce.user.dto.UserResponse;

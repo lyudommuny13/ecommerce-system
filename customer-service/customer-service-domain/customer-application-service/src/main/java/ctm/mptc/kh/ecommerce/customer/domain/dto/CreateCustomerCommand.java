@@ -1,6 +1,7 @@
 package ctm.mptc.kh.ecommerce.customer.domain.dto;
 
 public record CreateCustomerCommand(
+    String userId,
     String username,
     String familyName,
     String givenName,

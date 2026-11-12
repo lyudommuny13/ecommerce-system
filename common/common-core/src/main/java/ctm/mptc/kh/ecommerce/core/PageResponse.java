@@ -1,4 +1,4 @@
-package ctm.mptc.kh.ecommerce.restapi.dto;
+package ctm.mptc.kh.ecommerce.core;
 
 import lombok.Builder;
 
@@ -9,6 +9,8 @@ public record PageResponse<T>(
         List<T> items,
         int page,
         int size,
+        int totalPages,
+        long totalElements,
         boolean hasNext
 ) {
 }

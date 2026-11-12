@@ -1,6 +1,7 @@
 package ctm.mptc.kh.ecommerce.customer.domain.mapper;
 
 import ctm.mptc.kh.ecommerce.customer.domain.dto.CreateCustomerCommand;
+import ctm.mptc.kh.ecommerce.customer.domain.dto.CustomerResult;
 import ctm.mptc.kh.ecommerce.customer.domain.entity.Customer;
 import ctm.mptc.kh.ecommerce.domain.valueobject.Email;
 import ctm.mptc.kh.ecommerce.domain.valueobject.PhoneNumber;
@@ -17,6 +18,15 @@ public class CustomerDataMapper {
                 .email(new Email(createCustomerCommand.email()))
                 .phoneNumber(toPhoneNumber(createCustomerCommand.phoneNumber()))
                 .build();
+    }
+
+    public CustomerResult toCustomerResult(Customer customer) {
+        return new CustomerResult(
+                customer.getId().value(),
+                customer.getFamilyName(),
+                customer.getGivenName(),
+                customer.getEmail() == null ? null : customer.getEmail().value(),
+                customer.getPhoneNumber() == null ? null : customer.getPhoneNumber().number());
     }
 
     public PhoneNumber toPhoneNumber(String phoneNumber) {

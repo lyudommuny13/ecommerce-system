@@ -1,9 +1,23 @@
+feign:
+  sentinel:
+    enabled: true
+
 # Change customer service running port
 server:
   port: 0
   forward-headers-strategy: framework
 
 spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cache:
+    type: redis
+    redis:
+      time-to-live: 10m        # default TTL for all caches
+      cache-null-values: false
+
   application:
     name: customer-service
   profiles:
@@ -12,6 +26,13 @@ spring:
     import:
       - nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension} # order-service.yaml
   cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8081
+        port: 8719
+      eager: true
+      web-context-unify: false
+
     nacos:
       discovery:
         namespace: ${spring.profiles.active}
@@ -35,7 +56,7 @@ spring:
     url: jdbc:postgresql://localhost:8432/db_customer
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: false
     properties:
       hibernate:

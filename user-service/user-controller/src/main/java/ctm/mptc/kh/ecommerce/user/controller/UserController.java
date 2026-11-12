@@ -1,9 +1,7 @@
 package ctm.mptc.kh.ecommerce.user.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.alibaba.csp.sentinel.slots.block.degrade.DegradeException;
-import ctm.mptc.kh.ecommerce.restapi.dto.PageResponse;
+import ctm.mptc.kh.ecommerce.core.PageResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserCreateRequest;
 import ctm.mptc.kh.ecommerce.user.dto.UserResponse;
 import ctm.mptc.kh.ecommerce.user.dto.UserUpdateRequest;
@@ -13,9 +11,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")
