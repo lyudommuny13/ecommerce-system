@@ -42,4 +42,9 @@ public class CustomerQueryController {
     public UserResponse checkUser(@PathVariable String userId) {
         return userFeignClient.getById(userId);
     }
+
+    @GetMapping("/by-user/{userId}")
+    public UserResponse getCustomerByUserId(@PathVariable String userId) {
+        return userFeignClient.getById(userId);
+    }
 }
